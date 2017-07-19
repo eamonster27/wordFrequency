@@ -20,17 +20,17 @@ class Wordfreq
     @filteredArray.select{|target| target == word}.count
   end
 
-  def frequencies
-    wordFrequencyPairs = []
-    @filteredArray.each do |word|
-      wordFrequencyPairs << [word, frequency(word)]
-    end
-    filteredPairs = wordFrequencyPairs.uniq
-
-    orderedPairs = filteredPairs.sort_by do |key, value|
-      -(value)
-    end
-  end
+  # def frequencies
+  #   wordFrequencyPairs = []
+  #   @filteredArray.each do |word|
+  #     wordFrequencyPairs << [word, frequency(word)]
+  #   end
+  #   filteredPairs = wordFrequencyPairs.uniq
+  #
+  #   orderedPairs = filteredPairs.sort_by do |key, value|
+  #     -(value)
+  #   end
+  # end
 
   def top_words(number)
     wordFrequencyPairs = []
